@@ -60,20 +60,28 @@
 
     header {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 24px;
       margin-bottom: clamp(40px, 6vw, 72px);
     }
 
+    .brand {
+      display: flex;
+      flex-direction: column;
+      max-width: 46vw;
+    }
+
     .wordmark {
       font-family: var(--font-logo);
       font-weight: 700;
-      font-size: clamp(64px, 13vw, 168px);
+      font-size: clamp(80px, 17vw, 220px);
       color: var(--yellow);
       line-height: 1;
       letter-spacing: -0.01em;
+      margin-top: -0.12em;
+      text-align: right;
     }
 
     .location {
@@ -83,16 +91,18 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--white);
-      margin-top: 6px;
+      opacity: 0.5;
+      text-align: right;
+      margin-top: auto;
     }
 
     .divisions {
       display: grid;
       grid-template-columns: auto 1fr;
+      align-content: space-between;
       gap: 4px 24px;
       font-family: var(--font-body);
-      font-size: clamp(13px, 1.2vw, 15px);
-      padding-top: 6px;
+      font-size: clamp(15px, 1.5vw, 18px);
     }
 
     .divisions dt {
@@ -136,6 +146,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--pink-label);
+      opacity: 0.75;
       margin-bottom: clamp(16px, 2.5vw, 28px);
     }
 
@@ -151,18 +162,14 @@
       font-size: clamp(40px, 8.5vw, 96px);
       line-height: 1.08;
       text-transform: uppercase;
-      color: var(--pink-muted);
+      color: rgba(255, 255, 255, 0.9);
       text-decoration: none;
       letter-spacing: 0.01em;
-      transition: opacity 150ms ease-out;
+      transition: color 150ms ease-out;
     }
 
     .project-list a:hover,
     .project-list a:focus-visible {
-      opacity: 0.75;
-    }
-
-    .project-list .highlight {
       color: var(--yellow);
     }
 
@@ -181,7 +188,7 @@
 <body>
 
   <header>
-    <div>
+    <div class="brand">
       <div class="wordmark">sprnova</div>
       <div class="location">Scarborough, Canada</div>
     </div>
@@ -207,7 +214,7 @@
       <a href="https://github.com/fnkydcks-lab/dt-foundry" target="_blank" rel="noopener noreferrer">DT-Foundry</a>
       <a href="https://zenodo.org/records/18842578" target="_blank" rel="noopener noreferrer">Built to Forget</a>
       <a href="https://qqfck.ing/braindumps/" target="_blank" rel="noopener noreferrer">QQFCK</a>
-      <a class="highlight" href="/nexus23.pdf" target="_blank" rel="noopener noreferrer">Nexus</a>
+      <a href="/nexus23.pdf" target="_blank" rel="noopener noreferrer">Nexus</a>
       <a href="https://chrrpt.app" target="_blank" rel="noopener noreferrer">Chrrpt</a>
     </div>
   </main>
